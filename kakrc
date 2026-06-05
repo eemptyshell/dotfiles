@@ -145,7 +145,6 @@ hook global WinSetOption filetype=(javascript|typescript|html|css|json|yaml|mark
 declare-option -hidden str git_diff_out
 define-command -hidden update-git-gutter %{
     nop %sh{
-        # 在背景非同步執行 git diff，完全不拖慢編輯器渲染
         (
             diff=$(git diff -U0 -- "$kak_buffile" 2>/dev/null | grep -E '^@@' | awk '{print $3}')
             # 格式化輸出並安全傳回 Kakoune
