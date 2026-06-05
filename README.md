@@ -1,1 +1,1 @@
-install ripgrep find-fd kak-lsp
+install ripgrep find-fd kak-lsp git
