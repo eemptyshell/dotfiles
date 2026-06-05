@@ -38,7 +38,6 @@ plug "evanrelf/byline.kak" config %{
 plug "gustavo-hms/luar" %{
   require-module luar
 }
-plug "gustavo-hms/peneira"
 # buffers
 plug 'delapouite/kakoune-buffers' %{
   map global normal ^ q
