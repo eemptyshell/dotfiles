@@ -1,3 +1,11 @@
+evaluate-commands %sh{
+    plugins="$kak_config/plugins"
+    mkdir -p "$plugins"
+    [ ! -e "$plugins/plug.kak" ] && \
+        git clone -q https://github.com/andreyorst/plug.kak.git "$plugins/plug.kak"
+    printf "%s\n" "source '$plugins/plug.kak/rc/plug.kak'"
+}
+plug "andreyorst/plug.kak" noload
 
 ### Pretty I
 set-option global tabstop 4
@@ -13,9 +21,6 @@ add-highlighter global/ wrap -word -indent
 add-highlighter global/ show-matching
 
 ### Plugins
-source "%val{config}/plugins/plug.kak/rc/plug.kak"
-plug "andreyorst/plug.kak" noload
-## Plugins
 # autopairs
 plug "alexherbo2/auto-pairs.kak" config %{
   enable-auto-pairs
