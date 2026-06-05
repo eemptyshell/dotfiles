@@ -1,1 +1,1 @@
-install ripgrep find-fd rustup kak-lsp
+install ripgrep find-fd kak-lsp
